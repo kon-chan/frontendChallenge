@@ -15,10 +15,9 @@ class BookShow extends React.Component {
       baseURL: 'https://wfc2-image-api-259809.appspot.com/api'
     })
 
-    //request.get(`/books/${this.props.seriesId}/`)
 
-    //request.get('/books/D2rzfW7j/')
-    request.get(`/books/${this.props.id}/`)
+    console.log(this.props.booksId)
+    request.get(`/books/${this.props.booksId}/`)
     .then(res => {
       this.setState({
         datas: res.data.imageData

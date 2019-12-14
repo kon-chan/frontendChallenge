@@ -17,13 +17,11 @@ class BookSeries extends React.Component {
       baseURL: 'https://wfc2-image-api-259809.appspot.com/api'
     })
 
-    //request.get(`/books/${this.props.seriesId}/`)
-
-    //request.get('/books/D2rzfW7j/')
+    //各巻の取得
     request.get(`/series/${this.props.seriesId}/`)
     .then(res => {
       this.setState({
-        datas: res.books
+        datas: res.data.books
       });
     })
   }
@@ -36,15 +34,12 @@ class BookSeries extends React.Component {
             <div>
               <h3>TITLE : {bookItem.title}</h3>
               <img src={bookItem.image} />
+
+              <BookShow booksId={bookItem.id} />
             </div>
           )
         })}
 
-        {this.state.datas.map((bookSerect) => {
-          return (
-            <BookShow booksId={bookSerect.id}/>
-          )
-        })}
       </div>
     );
   }

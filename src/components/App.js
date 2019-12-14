@@ -27,7 +27,6 @@ class App extends React.Component {
 
     return (
       <div>
-
         {this.state.datas.map((bookItem) => {
           return (
             <Library
