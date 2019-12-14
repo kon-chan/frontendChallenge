@@ -11,6 +11,8 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 
 import BookShow from './BookShow';
 //import '../css/BookSeries.css';
+const styles = { whiteSpace: 'normal' };
+
 
 class BookSeries extends React.Component {
   constructor(){
@@ -65,8 +67,9 @@ class BookSeries extends React.Component {
                   <img src={tile.image} alt={tile.title} style={{position: 'static', transform: 'none'}}/>
                   <GridListTileBar
                     title={tile.title}
-                    style={{position: 'static'}}
-                  />
+                    style={{position: 'static', whiteSpace: 'normal'}}
+                  >
+                  </GridListTileBar>
                 </GridListTile>
               ))}
             </GridList>
