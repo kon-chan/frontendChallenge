@@ -20,7 +20,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-//import BookSeries from './BookSeries';
+import BookSeries from './BookSeries';
 
 
 class Library extends React.Component {
@@ -28,7 +28,7 @@ class Library extends React.Component {
   render() {
     return (
         <Card className="card container">
-          <CardContent>
+          <CardContent className="cardContent" >
             <div className="routeBook">
               <img src={this.props.seriesImage} alt={this.props.title} className="routeBook" />
             </div>
@@ -48,6 +48,8 @@ class Library extends React.Component {
           <CardActions>
             <Button size="small" style={{margin: 'auto'}}>はじめから読む</Button>
           </CardActions>
+
+          <BookSeries seriesId={this.props.seriesId} />
         </Card>
 
 

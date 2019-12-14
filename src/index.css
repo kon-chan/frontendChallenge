@@ -58,6 +58,9 @@ header a {
   margin-top: 30px;
   padding: 4px 20px 20px;
 }
+.cardContent {
+  width: 100%;
+}
 
 .routeBook {
   width: 20%;
@@ -86,6 +89,9 @@ header a {
 }
 
 /* ここからBookSeries */
+.gridList {
+  clear: both;
+}
 .gridListTile {
   margin-top: 30px;
 }
