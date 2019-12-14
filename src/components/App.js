@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Library from './Library';
+import '../index.css';
 
 class App extends React.Component {
   constructor(){
