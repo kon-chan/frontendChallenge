@@ -1,0 +1,8 @@
+.gridListTileImg {
+  position: static;
+  transform: none;
+}
+.gridListTileBar {
+  position: static;
+  height: 100px;
+}

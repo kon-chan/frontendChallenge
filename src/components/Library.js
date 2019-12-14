@@ -36,9 +36,10 @@ class Library extends React.Component {
           </Typography>
         </CardContent>
       </CardActionArea>
-    </Card>
 
       <BookSeries seriesId={this.props.seriesId} />
+    </Card>
+
 
       </div>
 

@@ -6,10 +6,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
-import IconButton from '@material-ui/core/IconButton';
+//import IconButton from '@material-ui/core/IconButton';
 
 
 import BookShow from './BookShow';
+//import '../css/BookSeries.css';
 
 class BookSeries extends React.Component {
   constructor(){
@@ -60,14 +61,11 @@ class BookSeries extends React.Component {
       <div className="container">
             <GridList className="gridList" cols={4}>
               {this.state.datas.map(tile => (
-                <GridListTile className="gridListTile" key={tile.image}>
-                  <img src={tile.image} alt={tile.title} />
+                <GridListTile className="gridListTile" style={{ height: 'auto' }} key={tile.image}>
+                  <img src={tile.image} alt={tile.title} style={{position: 'static', transform: 'none'}}/>
                   <GridListTileBar
                     title={tile.title}
-                    actionIcon={
-                      <IconButton aria-label={tile.title}>
-                      </IconButton>
-                    }
+                    style={{position: 'static'}}
                   />
                 </GridListTile>
               ))}

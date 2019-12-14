@@ -64,10 +64,13 @@ header a {
 }
 
 
-/* シリーズ窓のheight */
+/* シリーズ窓のheight
 .gridList {
   height: 400px;
 }
+*/
+
+/* ここからBookSeries */
 .gridList img {
   width: 60%;
   height: auto;
@@ -76,6 +79,13 @@ header a {
 .gridListTile {
   height: 400px;
 }
+
+.gridListTileBar {
+  position: static;
+  height: 100px
+}
+
+/* ここまでBookSeries */
 
 /* 漫画の中身の1ページ！ */
 .readContainer {
