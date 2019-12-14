@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
-//import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 
 
 import BookShow from './BookShow';
@@ -60,7 +60,13 @@ class BookSeries extends React.Component {
             <GridList className="gridList" cols={4}>
               {this.state.datas.map(tile => (
                 <GridListTile className="gridListTile" style={{ height: 'auto' }} key={tile.image}>
-                  <img src={tile.image} alt={tile.title} style={{position: 'static', transform: 'none'}}/>
+
+                  <Button variant="contained">
+<img src={tile.image} alt={tile.title} style={{position: 'static', transform: 'none'}}/>
+                  </Button>
+
+
+
                   <GridListTileBar
                     title={tile.title}
                     style={{position: 'static', whiteSpace: 'normal'}}
@@ -72,7 +78,7 @@ class BookSeries extends React.Component {
 
 
 
-          {/*<BookShow booksId="D2rzfW7j" />*/}
+          <BookShow booksId="D2rzfW7j" />
       </div>
 
     );
