@@ -1,4 +1,6 @@
 import React from 'react';
+//import { BrowserRouter, Route, Link } from 'react-router-dom'
+//import { withRouter } from 'react-router-dom';
 
 //Material-UI
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,31 +12,21 @@ import CardMedia from '@material-ui/core/CardMedia';
 //import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-//import BookSeries from './BookSeries';
-//mport '../index.css';
-
-const useStyles = makeStyles({
-  card: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
-});
+import BookSeries from './BookSeries';
 
 
 class Library extends React.Component {
 
   render() {
     return (
-
-
-
+      <div>
       <Card className="card container">
       <CardActionArea>
         <CardMedia title={this.props.title} >
-          <img src={this.props.seriesImage}/>
+          <img src={this.props.seriesImage} className="routeBook" />
         </CardMedia>
+
+
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {this.props.title}
@@ -44,9 +36,16 @@ class Library extends React.Component {
           </Typography>
         </CardContent>
       </CardActionArea>
+
+      <BookSeries seriesId={this.props.seriesId} />
     </Card>
+
+
+      </div>
+
     );
   }
 }
 
 export default Library;
+//export default withRouter(Library);
