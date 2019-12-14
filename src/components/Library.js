@@ -1,4 +1,6 @@
 import React from 'react';
+//import { BrowserRouter, Route, Link } from 'react-router-dom'
+
 
 //Material-UI
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,8 +12,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 //import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-//import BookSeries from './BookSeries';
-//mport '../index.css';
+import BookSeries from './BookSeries';
 
 const useStyles = makeStyles({
   card: {
@@ -27,9 +28,7 @@ class Library extends React.Component {
 
   render() {
     return (
-
-
-
+      <div>
       <Card className="card container">
       <CardActionArea>
         <CardMedia title={this.props.title} >
@@ -44,7 +43,12 @@ class Library extends React.Component {
           </Typography>
         </CardContent>
       </CardActionArea>
+
+      <BookSeries seriesId={this.props.seriesId} />
+
     </Card>
+      </div>
+
     );
   }
 }
