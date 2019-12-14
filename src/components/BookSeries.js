@@ -60,7 +60,7 @@ class BookSeries extends React.Component {
       <div className="container">
             <GridList className="gridList" cols={4}>
               {this.state.datas.map(tile => (
-                <GridListTile key={tile.image}>
+                <GridListTile className="gridListTile" key={tile.image}>
                   <img src={tile.image} alt={tile.title} />
                   <GridListTileBar
                     title={tile.title}
