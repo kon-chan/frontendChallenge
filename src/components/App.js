@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import { BrowserRouter } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Library from './Library';
@@ -31,8 +30,6 @@ class App extends React.Component {
 
     return (
       <div>
-      <BrowserRouter>
-
         {this.state.datas.map((bookItem) => {
           return (
             <Library
@@ -45,8 +42,6 @@ class App extends React.Component {
             />
           )
         })}
-      </BrowserRouter>
-
       </div>
     );
   }

@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 
+//Material UI
+//import CssBaseline from '@material-ui/core/CssBaseline';
+import Container from '@material-ui/core/Container';
+
 
 class BookShow extends React.Component {
   constructor(){
@@ -8,6 +12,7 @@ class BookShow extends React.Component {
     this.state = {
       datas:[]
     };
+    console.log("hello")
   }
 
   componentWillMount(){
@@ -25,18 +30,32 @@ class BookShow extends React.Component {
     })
   }
 
+  /*returnのやつ
+  <div>
+    {this.state.datas.map((bookImage) => {
+      return (
+          <div>
+            <img src={bookImage.imageUrl} />
+          </div>
+      )
+    })}
+
+  </div>
+  */
+
   render() {
     return (
-      <div>
-        {this.state.datas.map((bookImage) => {
-          return (
-              <div>
-                <img src={bookImage.imageUrl} />
-              </div>
-          )
-        })}
-
-      </div>
+      <React.Fragment>
+        <Container fixed>
+          {this.state.datas.map((bookImage) => {
+            return (
+                <div>
+                  <img src={bookImage.imageUrl} />
+                </div>
+            )
+          })}
+        </Container>
+      </React.Fragment>
     )
   }
 }

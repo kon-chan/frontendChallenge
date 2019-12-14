@@ -9,7 +9,7 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 
 
-//import BookShow from './BookShow';
+import BookShow from './BookShow';
 
 class BookSeries extends React.Component {
   constructor(){
@@ -72,6 +72,12 @@ class BookSeries extends React.Component {
                 </GridListTile>
               ))}
             </GridList>
+
+
+
+          <BookShow
+            booksId="D2rzfW7j"
+          />
       </div>
 
     );
