@@ -34,6 +34,9 @@ p {
 header {
   width: 100%;
   background-color: #555;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 header a {
   font-size: 2em;
@@ -72,4 +75,13 @@ header a {
 
 .gridListTile {
   height: 400px;
+}
+
+/* 漫画の中身の1ページ！ */
+.readContainer {
+  height: 100%;
+  padding-top: 80px;
+  width: auto;
+}
+.readContainer img {
 }

@@ -2,8 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 //Material UI
-//import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
+//import Container from '@material-ui/core/Container';
 
 
 class BookShow extends React.Component {
@@ -21,7 +20,6 @@ class BookShow extends React.Component {
     })
 
 
-    console.log(this.props.booksId)
     request.get(`/books/${this.props.booksId}/`)
     .then(res => {
       this.setState({
@@ -45,8 +43,7 @@ class BookShow extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Container fixed>
+      <div className="readContainer">
           {this.state.datas.map((bookImage) => {
             return (
                 <div>
@@ -54,8 +51,7 @@ class BookShow extends React.Component {
                 </div>
             )
           })}
-        </Container>
-      </React.Fragment>
+      </div>
     )
   }
 }
