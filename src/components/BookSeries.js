@@ -72,9 +72,7 @@ class BookSeries extends React.Component {
 
 
 
-          <BookShow
-            booksId="D2rzfW7j"
-          />
+          {/*<BookShow booksId="D2rzfW7j" />*/}
       </div>
 
     );

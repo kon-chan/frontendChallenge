@@ -34,6 +34,7 @@ p {
 header {
   width: 100%;
   background-color: #555;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -50,16 +51,34 @@ header a {
   text-align: center;
 }
 
+
+/* ここからLibrary */
 .card {
   width: 80%;
   margin-top: 30px;
+
+  background-color: #999;
 }
 
 .routeBook {
-  width: 200px;
+  width: 20%;
+  float: left;
+}
+.routeBook img {
+  width: 100%;
+}
+
+.routeBookDisc {
+  width: 80%;
+}
+
+/* ここからBookSeries */
+.gridListTile {
+  margin-top: 30px;
 }
 .gridListTile img {
   width: 60%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
 }
 .MuiCardMedia-root {
   float: left;
