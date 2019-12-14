@@ -56,8 +56,7 @@ header a {
 .card {
   width: 80%;
   margin-top: 30px;
-
-  background-color: #999;
+  padding: 4px 20px 20px;
 }
 
 .routeBook {
@@ -68,8 +67,22 @@ header a {
   width: 100%;
 }
 
-.routeBookDisc {
+.routeBookDesc {
   width: 80%;
+  float: right;
+}
+
+.routeBookDesc h2 {
+  font-weight: 600;
+  padding: 10px 0 8px;
+  text-align:
+}
+.desc {
+  padding: 10px 20px;
+}
+
+.readButton {
+  margin: 0 auto;
 }
 
 /* ここからBookSeries */

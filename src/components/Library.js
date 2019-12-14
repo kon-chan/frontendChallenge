@@ -33,20 +33,20 @@ class Library extends React.Component {
               <img src={this.props.seriesImage} alt={this.props.title} className="routeBook" />
             </div>
 
-            <div className="routeBookDisc">
-              <Typography variant="h5" component="h2">
+            <div className="routeBookDesc">
+              <Typography variant="h5" component="h2" >
                 {this.props.title}
               </Typography>
               <Typography color="textSecondary">
                 {this.props.author}
               </Typography>
-              <Typography variant="body2" component="p">
+              <Typography variant="body2" component="p" style={{paddingLeft: 35, paddingTop: 12, textAlign: 'left'}} >
                 {this.props.description}
               </Typography>
             </div>
           </CardContent>
           <CardActions>
-            <Button size="small">はじめから読む</Button>
+            <Button size="small" style={{margin: 'auto'}}>はじめから読む</Button>
           </CardActions>
         </Card>
 
