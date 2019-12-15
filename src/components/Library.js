@@ -24,14 +24,6 @@ class Library extends React.Component {
     })
   }
 
-  link() {
-    if (this.setState !== undefined) {
-        return (
-        <Link to={`/show/${this.state.firstBookId}`} className="btn">はじめから読む</Link>
-        )
-    }
-  }
-
   render() {
     return (
       <Card className="card container">
@@ -56,11 +48,18 @@ class Library extends React.Component {
                 {this.props.description}
               </div>
             </Typography>
-            {this.link()}
+
+            {
+              (() => {
+                if (this.setState !== undefined) {
+                  return (
+                    <Link to={`/show/${this.state.firstBookId}`} className="btn">はじめから読む</Link>
+                  )
+                }
+              })()
+            }
           </div>
-
         </CardContent>
-
         <hr />
         <BookSeries
           seriesId={this.props.seriesId}
