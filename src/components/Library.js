@@ -51,7 +51,7 @@ class Library extends React.Component {
 
             {
               (() => {
-                if (this.setState !== undefined) {
+                if (this.state.firstBookId !== undefined) {
                   return (
                     <Link to={`/show/${this.state.firstBookId}`} className="btn">はじめから読む</Link>
                   )
