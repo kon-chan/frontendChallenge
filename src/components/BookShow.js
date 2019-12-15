@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+//import { Link } from 'react-router-dom';
 
 
 class BookShow extends React.Component {
@@ -29,11 +30,11 @@ class BookShow extends React.Component {
         {this.state.datas.map((bookImage) => {
           return (
               <div className="readContainer">
-                <img src={bookImage.imageUrl} />
+                <img src={bookImage.imageUrl} key={bookImage.imageId} className="frame"/>
               </div>
           )
         })}
-
+        {/*<Link to='/' className="btn" >Libraryへ戻る</Link>*/}
       </div>
     )
   }
