@@ -15,10 +15,7 @@ class BookShow extends React.Component {
       baseURL: 'https://wfc2-image-api-259809.appspot.com/api'
     })
 
-    //request.get(`/books/${this.props.seriesId}/`)
-
-    //request.get('/books/D2rzfW7j/')
-    request.get(`/books/${this.props.id}/`)
+    request.get(`/books/${this.props.match.params.bookId}/`)
     .then(res => {
       this.setState({
         datas: res.data.imageData
@@ -28,10 +25,10 @@ class BookShow extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         {this.state.datas.map((bookImage) => {
           return (
-              <div>
+              <div className="readContainer">
                 <img src={bookImage.imageUrl} />
               </div>
           )
