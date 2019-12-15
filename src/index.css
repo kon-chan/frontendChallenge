@@ -8,7 +8,6 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6, p, div {
-   color: #2b546a;
    font-weight: normal;
 }
 
@@ -30,10 +29,9 @@ p {
   text-align:center;
 }
 
-
 header {
   width: 100%;
-  background-color: #555;
+  background-color: #00897B;
   box-shadow: 0 4px 12px rgba(0,0,0,.3);
   position: sticky;
   top: 0;

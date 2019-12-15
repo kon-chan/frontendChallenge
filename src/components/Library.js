@@ -1,6 +1,5 @@
 import React from 'react';
-//import { BrowserRouter, Route, Link } from 'react-router-dom'
-//import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 //Material-UI
 /*
@@ -25,6 +24,10 @@ import BookSeries from './BookSeries';
 
 class Library extends React.Component {
 
+  handleToReadPage = () => {
+    this.props.history.push('/read')
+  }
+
   render() {
     return (
         <Card className="card container">
@@ -46,7 +49,7 @@ class Library extends React.Component {
             </div>
           </CardContent>
           <CardActions>
-            <Button size="small" style={{margin: 'auto'}}>はじめから読む</Button>
+            <Button onClick={this.handleToReadPage} size="small" style={{margin: 'auto', color: '#4DD0E1'}}>はじめから読む</Button>
           </CardActions>
 
           <BookSeries seriesId={this.props.seriesId} />
@@ -82,5 +85,5 @@ class Library extends React.Component {
 </div>
 */
 
-export default Library;
+export default withRouter(Library);
 //export default withRouter(Library);

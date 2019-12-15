@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 
 //Material UI
-import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
@@ -59,10 +58,11 @@ class BookSeries extends React.Component {
       <div className="container">
             <GridList className="gridList" cols={4}>
               {this.state.datas.map(tile => (
+
                 <GridListTile className="gridListTile" style={{ height: 'auto' }} key={tile.image}>
 
-                  <Button variant="contained">
-<img src={tile.image} alt={tile.title} style={{position: 'static', transform: 'none'}}/>
+                  <Button className="btn" variant="contained">
+                    <img src={tile.image} alt={tile.title} style={{position: 'static', transform: 'none'}}/>
                   </Button>
 
 
@@ -71,6 +71,9 @@ class BookSeries extends React.Component {
                     title={tile.title}
                     style={{position: 'static', whiteSpace: 'normal'}}
                   >
+
+
+
                   </GridListTileBar>
                 </GridListTile>
               ))}
