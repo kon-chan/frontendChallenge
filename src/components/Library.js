@@ -56,7 +56,6 @@ class Library extends React.Component {
                 {this.props.description}
               </div>
             </Typography>
-
             {this.link()}
           </div>
 
