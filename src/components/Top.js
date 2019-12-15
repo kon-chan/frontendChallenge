@@ -5,7 +5,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Library from './Library';
 import BookShow from './BookShow'
-import '../index.css';
 
 class Top extends React.Component {
   constructor(){
@@ -31,15 +30,6 @@ class Top extends React.Component {
 
     return (
       <div>
-        {/*<BrowserRouter>
-          <div>
-            <Switch>
-              <Route exact path={'/'} component={Library}/>
-              <Route path={'/show/:bookId'} component={BookShow}/>
-            </Switch>
-          </div>
-        </BrowserRouter>*/}
-
         {this.state.datas.map((bookItem) => {
           return (
             <Library

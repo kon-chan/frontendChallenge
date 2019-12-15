@@ -31,7 +31,7 @@ class Library extends React.Component {
   render() {
     return (
         <Card className="card container">
-          <CardContent className="cardContent" >
+          <CardContent className="cardContent" key={this.props.seriesId}>
             <div className="routeBook">
               <img src={this.props.seriesImage} alt={this.props.title} className="routeBook" />
             </div>
