@@ -58,6 +58,9 @@ header a:hover {
   font-size: 1.2em;
   color: #4DD0E1;
 }
+.btn:hover {
+  cursor: pointer;
+}
 
 /* ここからLibrary */
 .card {

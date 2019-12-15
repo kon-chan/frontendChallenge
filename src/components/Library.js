@@ -66,7 +66,6 @@ class Library extends React.Component {
         <BookSeries
           seriesId={this.props.seriesId}
           onBooksFetched={this.setFirstBookId}
-
           />
       </Card>
 
