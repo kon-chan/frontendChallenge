@@ -10,9 +10,6 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 
 
 import BookShow from './BookShow';
-//import '../css/BookSeries.css';
-const styles = { whiteSpace: 'normal' };
-
 
 class BookSeries extends React.Component {
   constructor(){
@@ -34,8 +31,10 @@ class BookSeries extends React.Component {
       this.setState({
         datas: res.data.books
       });
+      this.props.onBooksFetched(res.data.books[0].id)
     })
   }
+
 
 
   render() {
@@ -47,11 +46,11 @@ class BookSeries extends React.Component {
             <GridListTile className="gridListTile" style={{ height: 'auto' }} key={tile.image}>
 
                 <Link to={`/show/${tile.id}`} key={tile.id} className="gridListTileLink">
-                  <img src={tile.image} alt={tile.title} style={{height: 200, position: 'static', transform: 'none'}}/>
+                  <img src={tile.image} alt={tile.title} style={{height: 200, paddingTop: 10, position: 'static', transform: 'none'}}/>
 
                 <GridListTileBar
                   title={tile.title}
-                  style={{backgroundColor: '#4DD0E1',position: 'static', whiteSpace: 'normal'}}
+                  style={{padding: 'noen', backgroundColor: '#009688',position: 'static', whiteSpace: 'normal'}}
                   />
                 </Link>
               </GridListTile>

@@ -8,10 +8,6 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, div {
-  font-weight: normal;
-}
-
 h1 {
   font-size: 1.5rem;
 }
@@ -19,11 +15,6 @@ h1 {
 body {
   margin: 0;
   padding: 0;
-}
-
-h1 {
-  padding-top: 40px;
-  text-align:center;
 }
 
 p {
@@ -62,6 +53,10 @@ header a:hover {
   background: #fff;
   box-shadow: 3px 2px 4px rgba(0,0,0,0.3);
   box-sizing: border-box;
+}
+.btn {
+  font-size: 1.2em;
+  color: #4DD0E1;
 }
 
 /* ここからLibrary */
@@ -116,7 +111,6 @@ header a:hover {
   color: #4DD0E1;
 }
 .gridListTile img {
-  /*width: 60%;*/
   display: inline-block;
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+//import { Link } from 'react-router-dom';
 
 
 class BookShow extends React.Component {
@@ -33,7 +34,7 @@ class BookShow extends React.Component {
               </div>
           )
         })}
-
+        {/*<Link to='/' className="btn" >Libraryへ戻る</Link>*/}
       </div>
     )
   }

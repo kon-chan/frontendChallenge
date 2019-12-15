@@ -1,21 +1,8 @@
 import React from 'react';
-//import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
 //Material-UI
-/*
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
-*/
-
-//Material-UI
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
@@ -23,6 +10,27 @@ import BookSeries from './BookSeries';
 
 
 class Library extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      firstBookId: undefined
+    }
+    this.setFirstBookId = this.setFirstBookId.bind(this)
+  }
+
+  setFirstBookId(id) {
+    this.setState({
+      firstBookId: id
+    })
+  }
+
+  link() {
+    if (this.setState !== undefined) {
+        return (
+        <Link to={`/show/${this.state.firstBookId}`} className="btn">はじめから読む</Link>
+        )
+    }
+  }
 
   render() {
     return (
@@ -42,52 +50,29 @@ class Library extends React.Component {
             <Typography color="textSecondary">
               {this.props.publisher}
             </Typography>
-            
+
             <Typography variant="body2" component="p" style={{paddingLeft: 35, paddingTop: 12, textAlign: 'left'}} >
               <div className="descContainer">
                 {this.props.description}
               </div>
             </Typography>
+
+            {this.link()}
           </div>
+
         </CardContent>
-        <CardActions>
-          {/*<Link to={`/show/${bookId}`}>はじめから読む</Link>*/}
-          {/*<Button onClick={this.handleToReadPage} size="small" style={{margin: 'auto', color: '#4DD0E1'}}>はじめから読む</Button>*/}
-        </CardActions>
 
         <hr />
-        <BookSeries seriesId={this.props.seriesId} />
+        <BookSeries
+          seriesId={this.props.seriesId}
+          onBooksFetched={this.setFirstBookId}
+
+          />
       </Card>
 
 
     );
   }
 }
-/*
-<div>
-<Card className="card container">
-<CardActionArea>
-<CardMedia title={this.props.title} >
-<img src={this.props.seriesImage} className="routeBook" />
-</CardMedia>
 
-
-<CardContent>
-<Typography gutterBottom variant="h5" component="h2">
-{this.props.title}
-</Typography>
-<Typography variant="body2" color="textSecondary" component="p">
-{this.props.description}
-</Typography>
-</CardContent>
-</CardActionArea>
-
-<BookSeries seriesId={this.props.seriesId} />
-</Card>
-
-
-</div>
-*/
-
-//export default withRouter(Library);
 export default Library;
