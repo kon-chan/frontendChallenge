@@ -24,37 +24,40 @@ import BookSeries from './BookSeries';
 
 class Library extends React.Component {
 
-  handleToReadPage = () => {
-    this.props.history.push('/show')
-  }
-
   render() {
     return (
-        <Card className="card container">
-          <CardContent className="cardContent" key={this.props.seriesId}>
-            <div className="routeBook">
-              <img src={this.props.seriesImage} alt={this.props.title} className="routeBook" />
-            </div>
+      <Card className="card container">
+        <CardContent className="cardContent" key={this.props.seriesId}>
+          <div className="routeBook">
+            <img src={this.props.seriesImage} alt={this.props.title} className="routeBook" />
+          </div>
 
-            <div className="routeBookDesc">
-              <Typography variant="h5" component="h2" >
-                {this.props.title}
-              </Typography>
-              <Typography color="textSecondary">
-                {this.props.author}
-              </Typography>
-              <Typography variant="body2" component="p" style={{paddingLeft: 35, paddingTop: 12, textAlign: 'left'}} >
+          <div className="routeBookDesc">
+            <Typography variant="h5" component="h2" >
+              {this.props.title}
+            </Typography>
+            <Typography color="textSecondary">
+              {this.props.author}
+            </Typography>
+            <Typography color="textSecondary">
+              {this.props.publisher}
+            </Typography>
+            
+            <Typography variant="body2" component="p" style={{paddingLeft: 35, paddingTop: 12, textAlign: 'left'}} >
+              <div className="descContainer">
                 {this.props.description}
-              </Typography>
-            </div>
-          </CardContent>
-          <CardActions>
-            {/*<Link to={`/show/${bookId}`}>はじめから読む</Link>*/}
-            {/*<Button onClick={this.handleToReadPage} size="small" style={{margin: 'auto', color: '#4DD0E1'}}>はじめから読む</Button>*/}
-          </CardActions>
+              </div>
+            </Typography>
+          </div>
+        </CardContent>
+        <CardActions>
+          {/*<Link to={`/show/${bookId}`}>はじめから読む</Link>*/}
+          {/*<Button onClick={this.handleToReadPage} size="small" style={{margin: 'auto', color: '#4DD0E1'}}>はじめから読む</Button>*/}
+        </CardActions>
 
-          <BookSeries seriesId={this.props.seriesId} />
-        </Card>
+        <hr />
+        <BookSeries seriesId={this.props.seriesId} />
+      </Card>
 
 
     );
@@ -64,19 +67,19 @@ class Library extends React.Component {
 <div>
 <Card className="card container">
 <CardActionArea>
-  <CardMedia title={this.props.title} >
-    <img src={this.props.seriesImage} className="routeBook" />
-  </CardMedia>
+<CardMedia title={this.props.title} >
+<img src={this.props.seriesImage} className="routeBook" />
+</CardMedia>
 
 
-  <CardContent>
-    <Typography gutterBottom variant="h5" component="h2">
-      {this.props.title}
-    </Typography>
-    <Typography variant="body2" color="textSecondary" component="p">
-    {this.props.description}
-    </Typography>
-  </CardContent>
+<CardContent>
+<Typography gutterBottom variant="h5" component="h2">
+{this.props.title}
+</Typography>
+<Typography variant="body2" color="textSecondary" component="p">
+{this.props.description}
+</Typography>
+</CardContent>
 </CardActionArea>
 
 <BookSeries seriesId={this.props.seriesId} />

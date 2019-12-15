@@ -48,12 +48,12 @@ class BookSeries extends React.Component {
 
             <GridListTile className="gridListTile" style={{ height: 'auto' }} key={tile.image}>
 
-                <Link to={`/show/${tile.id}`} key={tile.id}>
-                  <img src={tile.image} alt={tile.title} style={{position: 'static', transform: 'none'}}/>
+                <Link to={`/show/${tile.id}`} key={tile.id} className="gridListTileLink">
+                  <img src={tile.image} alt={tile.title} style={{height: 200, position: 'static', transform: 'none'}}/>
 
                 <GridListTileBar
                   title={tile.title}
-                  style={{position: 'static', whiteSpace: 'normal'}}
+                  style={{backgroundColor: '#4DD0E1',position: 'static', whiteSpace: 'normal'}}
                   />
                 </Link>
               </GridListTile>
