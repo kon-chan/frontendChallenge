@@ -4,10 +4,10 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Library from './Library';
-import BookShow from './BookShow';
+import BookShow from './BookShow'
 import '../index.css';
 
-class App extends React.Component {
+class Top extends React.Component {
   constructor(){
     super();
     this.state = {
@@ -31,19 +31,31 @@ class App extends React.Component {
 
     return (
       <div>
-        <BrowserRouter>
+        {/*<BrowserRouter>
           <div>
             <Switch>
               <Route exact path={'/'} component={Library}/>
-              <Route path={'/read'} component={BookShow}/>
+              <Route path={'/show/:bookId'} component={BookShow}/>
             </Switch>
           </div>
-        </BrowserRouter>
+        </BrowserRouter>*/}
 
+        {this.state.datas.map((bookItem) => {
+          return (
+            <Library
+            seriesId={bookItem.seriesId}
+            title={bookItem.title}
+            author={bookItem.author}
+            publisher={bookItem.publisher}
+            description={bookItem.description}
+            seriesImage={bookItem.seriesImage}
+            />
+          )
+        })}
 
       </div>
     );
   }
 }
 
-export default App;
+export default Top;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+//import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 
 //Material-UI
 /*
@@ -16,7 +17,6 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 import BookSeries from './BookSeries';
@@ -25,7 +25,7 @@ import BookSeries from './BookSeries';
 class Library extends React.Component {
 
   handleToReadPage = () => {
-    this.props.history.push('/read')
+    this.props.history.push('/show')
   }
 
   render() {
@@ -49,7 +49,8 @@ class Library extends React.Component {
             </div>
           </CardContent>
           <CardActions>
-            <Button onClick={this.handleToReadPage} size="small" style={{margin: 'auto', color: '#4DD0E1'}}>はじめから読む</Button>
+            {/*<Link to={`/show/${bookId}`}>はじめから読む</Link>*/}
+            {/*<Button onClick={this.handleToReadPage} size="small" style={{margin: 'auto', color: '#4DD0E1'}}>はじめから読む</Button>*/}
           </CardActions>
 
           <BookSeries seriesId={this.props.seriesId} />
@@ -85,5 +86,5 @@ class Library extends React.Component {
 </div>
 */
 
-export default withRouter(Library);
 //export default withRouter(Library);
+export default Library;

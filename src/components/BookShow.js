@@ -16,8 +16,7 @@ class BookShow extends React.Component {
     })
 
 
-    console.log(this.props.booksId)
-    request.get(`/books/${this.props.booksId}/`)
+    request.get(`/books/${this.props.match.params.bookId}/`)
     .then(res => {
       this.setState({
         datas: res.data.imageData
