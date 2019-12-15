@@ -29,7 +29,7 @@ class BookShow extends React.Component {
         {this.state.datas.map((bookImage) => {
           return (
               <div className="readContainer">
-                <img src={bookImage.imageUrl} className="frame"/>
+                <img src={bookImage.imageUrl} key={bookImage.imageId} className="frame"/>
               </div>
           )
         })}

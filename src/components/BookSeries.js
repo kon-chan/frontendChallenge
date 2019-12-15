@@ -40,8 +40,6 @@ class BookSeries extends React.Component {
 
   render() {
     return (
-
-
       <div className="container">
         <GridList className="gridList" cols={4}>
           {this.state.datas.map(tile => (
